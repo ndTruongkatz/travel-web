@@ -1,0 +1,31 @@
+.world-mid {
+    .new-way {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 0 50px;
+        .new-way-img {}
+        .new-way-about {
+            max-width: 450px;
+            .new-way-heading {
+                font-family: $font-primary;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 50px;
+            }
+            .text-a {
+                margin: 20px 0 33px 0;
+                font-size: 17px;
+                line-height: 30px;
+                color: $gray-7d;
+                font-family: $font-third;
+            }
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .new-way {
+            flex-direction: column-reverse;
+            gap: 50px 0;
+        }
+    }
+}

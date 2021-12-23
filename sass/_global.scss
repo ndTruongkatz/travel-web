@@ -1,0 +1,64 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    font-family: $font-secondary;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 1660px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: $font-third;
+    line-height: calc(33 / 22);
+    padding: 13px 50px;
+    color: $white-color;
+    border: 0;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    &--primary {
+        color: white;
+        background-color: $orange-color;
+    }
+    &--secondary {
+        color: $orange-color;
+        border: 1px solid currentColor;
+    }
+    &--explore {
+        background-color: $orange-color;
+        font-weight: 500;
+        padding: 13px 59px;
+        font-size: 17px;
+        margin-top: 10px;
+        &:focus {
+            box-shadow: 0 0 0 0.25rem rgb(217 164 6 / 50%);
+        }
+    }
+    &--more {
+        background-color: $orange-color;
+        padding: 8px 24px;
+        font-size: 16px;
+    }
+    &--download {
+        background-color: $orange-color;
+        margin-top: 30px;
+        padding: 12px 44px;
+        font-size: 16px;
+    }
+    &:focus:not(:focus-visible) {
+        outline: 0;
+    }
+}

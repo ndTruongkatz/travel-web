@@ -1,0 +1,96 @@
+.testimonials {
+    margin-top: 235px;
+    .container-testimo {
+        .testimo-main {
+            .testimo-heading {
+                font-size: 36px;
+                font-family: $font-primary;
+                font-weight: 700;
+                margin-bottom: 60px;
+            }
+            .lider-2 {
+                .slick-prev {
+                    bottom: 0;
+                    right: 145px;
+                    color: #7d7d7d;
+                }
+                .slick-next {
+                    right: 95px;
+                    bottom: 0;
+                    color: $black-color;
+                }
+                .slick-arrow {
+                    position: absolute;
+                    background-color: transparent;
+                    border: none;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 40px;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+    .testimo-slide {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .testimo-about {
+            .user-rate {
+                display: flex;
+                align-items: center;
+                gap: 0 15px;
+            }
+            .user-comment {
+                max-width: 450px;
+                font-size: 24px;
+                line-height: 36px;
+                margin-top: 25px;
+                font-family: $font-third;
+                margin-bottom: 35px;
+            }
+            .user-name {
+                .name {
+                    font-weight: 700;
+                    line-height: 48px;
+                    font-size: 22px;
+                }
+                .location {
+                    font-size: 18px;
+                    color: $black-color;
+                }
+            }
+        }
+        .testimo-user-img {
+            position: relative;
+            width: 385px;
+            height: 491px;
+            .img-user {
+                width: 385px;
+                height: 491px;
+                border-radius: 10px;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            .testimo-user-img::after {
+                content: "";
+                position: absolute;
+                width: 120px;
+                height: 60px;
+                background-color: $white-color;
+                right: 0;
+                bottom: 0px;
+                border-top-left-radius: 8px;
+            }
+        }
+        @media screen and (max-width: 1023px) {
+            margin: 75px 0;
+        }
+        @media screen and (max-width: 767px) {
+            .testimo-slide {
+                flex-direction: column-reverse;
+                gap: 15px 0;
+            }
+        }
+    }
+}

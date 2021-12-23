@@ -1,0 +1,100 @@
+.trending {
+    margin-top: 235px;
+    .trending-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .trending-hd {
+            font-family: $font-primary;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 50px;
+            color: $black-color;
+        }
+        .trending-link-view-more {
+            text-decoration: none;
+            color: $orange-color;
+            font-weight: 600;
+            font-size: 17px;
+            .icon-ab {
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+    .trending-place {
+        margin-top: 40px;
+        margin-bottom: 70px;
+        .trending-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 25px;
+            .trending-item {
+                display: flex;
+                flex-direction: column;
+                .img-trending {
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                    height: 235px;
+                    width: 270px;
+                }
+                .tieu-de {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 255px;
+                    .trend-hd {
+                        font-weight: 700;
+                        font-size: 19px;
+                        color: $black-color;
+                        margin: 13px 0;
+                    }
+                    .trend-about {
+                        font-size: 15px;
+                        margin-bottom: 22px;
+                        color: $gray-7d;
+                        line-height: 175%;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        word-break: break-word;
+                    }
+                    .trend-link__read-more {
+                        margin-top: auto;
+                        color: $orange-color;
+                        font-size: 15px;
+                        display: block;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        margin: 75px 0;
+    }
+    .trending-place .trending-list {
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-columns: 300px;
+        grid-auto-flow: column;
+        grid-gap: 0 25px;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        grid-template-columns: unset;
+    }
+    .trending-place .trending-list::-webkit-scrollbar {
+        display: none;
+        width: 0;
+    }
+    .trending-place .trending-list>* {
+        scroll-snap-align: start;
+    }
+}

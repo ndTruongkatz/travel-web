@@ -1,0 +1,152 @@
+.header {
+    margin: 45px auto 245px auto;
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        width: 41px;
+        height: 41px;
+        &-link {
+            text-decoration: none;
+        }
+        &-img {
+            width: 100%;
+        }
+    }
+   
+    &-main {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // margin-left: 108px;
+        margin-top: 80px;
+        &::before {
+            content: "";
+            position: absolute;
+            background: linear-gradient(156.14deg, #bff0dd 12.18%, #57d2a3 87.99%);
+            left: -90px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            animation: updowns 2s infinite alternate-reverse;
+        }
+        .explore-travel-heading {
+            width: 100%;
+            .header-heading {
+                font-family: $font-primary;
+                font-size: 64px;
+                line-height: 80px;
+                font-weight: 700;
+            }
+            .header-holiday-text {
+                margin-top: 70px;
+                font-size: 22px;
+                font-weight: 600;
+            }
+            .hr-32px {
+                width: 32px;
+                height: 3px;
+                background-color: $primary-color;
+                margin-top: 20px;
+                margin-bottom: 48px;
+            }
+        }
+    }
+    &-section {
+        display: flex;
+        columns: 2;
+        align-items: center;
+        gap: 35px 30px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        &-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px 0 30px;
+            width: 220px;
+            height: 52px;
+            border: 0.8px solid $border-color;
+            border-radius: 6px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            cursor: pointer;
+            &:hover .about-list {
+                display: block;
+            }
+            .location-select {
+                color: $gray;
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .about-list {
+                position: absolute;
+                top: 50px;
+                left: 30px;
+                right: 5px;
+                padding: 0 10px;
+                display: none;
+                border-radius: 6px;
+                background-color: $white-color;
+                list-style-type: none;
+                border: 1px solid $border-color;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                text-overflow: ellipsis;
+                z-index: 9;
+                .list-item {
+                    // margin: 10px 0;
+                    .item-link {
+                        color: $primary-color;
+                        line-height: 30px;
+                        display: inline-block;
+                        min-width: 100%;
+                    }
+                    .item-link:hover {
+                        color: $orange-color;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding: 30px 0;
+    }
+    @media screen and (min-width: 1280px) {
+        &-img {
+            transform: translateX(85px);
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .explore-travel-heading {
+            max-width: 470px;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        margin-bottom: 75px;
+        &-main {
+            flex-direction: column;
+            gap: 50px 0;
+        }
+        &-section {
+            flex-wrap: nowrap !important;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &-section {
+            flex-direction: column;
+        }
+    }
+}
+
+@keyframes updowns {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(100px);
+    }
+}
